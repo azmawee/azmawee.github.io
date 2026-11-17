@@ -1,15 +1,602 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
-  <meta charset="utf-8">
-  <title>Redirecting…</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="canonical" href="https://github.com/azmawee/profile">
-  <meta http-equiv="refresh" content="0; url=https://github.com/azmawee/profile">
-  <meta name="robots" content="noindex">
-  <script>window.location.replace("https://github.com/azmawee/profile");</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tengku Azmawee · ex-BNM, ex-CIMB, hidup bebas berjejak bumi</title>
+<meta name="description" content="Tengku Azmawee, jurutera keselamatan siber dan Unix/FreeBSD. Semua pautan: blog, GitHub, buku FreeBSD, sosial dan e-mel.">
+<link rel="canonical" href="https://azmawee.github.io/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#14130f">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Tengku Azmawee">
+<meta property="og:description" content="ex-BNM, ex-CIMB, hidup bebas berjejak bumi. Keselamatan siber, Unix/FreeBSD, komuniti open source.">
+<meta property="og:url" content="https://azmawee.github.io/">
+<meta property="og:image" content="https://azmawee.github.io/assets/avatar.jpg">
+<meta property="og:image:alt" content="Tengku Azmawee">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tengku Azmawee">
+<meta name="twitter:description" content="ex-BNM, ex-CIMB, hidup bebas berjejak bumi.">
+<meta name="twitter:image" content="https://azmawee.github.io/assets/avatar.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%2314130f'/%3E%3Ctext%20x='32'%20y='45'%20font-family='Georgia,serif'%20font-size='38'%20fill='%23d9a94f'%20text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Tengku Azmawee",
+  "alternateName": "azmawee",
+  "url": "https://azmawee.github.io/",
+  "image": "https://azmawee.github.io/assets/avatar.jpg",
+  "email": "azmawee@freebsd.my",
+  "jobTitle": "Cybersecurity and Unix/FreeBSD Engineer",
+  "sameAs": [
+    "https://github.com/azmawee",
+    "https://freebsd.my/",
+    "https://azmawee.freebsd.my/",
+    "https://www.facebook.com/maui512gbram",
+    "https://www.instagram.com/maui512gbram/",
+    "https://www.threads.com/@maui512gbram",
+    "https://x.com/maui_mybsd",
+    "https://www.tiktok.com/@azmawee"
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#14130f;
+  --bg-soft:#1b1915;
+  --text:#f0e9da;
+  --muted:#a99f8d;
+  --line:rgba(240,233,218,.14);
+  --gold:#d9a94f;
+  --gold-soft:rgba(217,169,79,.10);
+  --serif:'Iowan Old Style','Palatino Linotype',Palatino,'Book Antiqua',Georgia,serif;
+  --sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --mono:ui-monospace,'Cascadia Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace;
+  --wrap:760px;
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:dark;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:clamp(1rem,.5vw + .92rem,1.06rem);
+  line-height:1.65;
+  caret-color:var(--gold);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--gold);color:var(--bg)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+a{color:var(--gold);text-underline-offset:3px;text-decoration-thickness:1px}
+.bg{position:fixed;inset:0;z-index:0;color:var(--gold);opacity:.07;pointer-events:none}
+.bg svg{width:100%;height:100%;display:block}
+.spot{
+  position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0;
+  transition:opacity .5s var(--ease);
+  background:radial-gradient(circle 340px at var(--mx,50%) var(--my,50%),rgba(217,169,79,.11),transparent 70%);
+}
+.spot.on{opacity:1}
+body::after{
+  content:"";
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='140'%20height='140'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='140'%20height='140'%20filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.wrap{
+  position:relative;z-index:1;
+  width:100%;max-width:var(--wrap);
+  margin-inline:auto;
+  padding-inline:clamp(1.25rem,4vw,2rem);
+}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:3;
+  background:var(--bg-soft);color:var(--text);
+  padding:.6rem 1rem;border:1px solid var(--gold);border-radius:6px;
+}
+.skip:focus{left:1rem;top:1rem}
+.hero{padding-block:1.1rem 1.6rem}
+.hero>*{animation:rise .9s var(--ease) both}
+.hero>:nth-child(2){animation-delay:.05s}
+.hero>:nth-child(3){animation-delay:.1s}
+.hero>:nth-child(4){animation-delay:.16s}
+.hero>:nth-child(5){animation-delay:.22s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.avatar{
+  width:88px;height:88px;border-radius:50%;
+  object-fit:cover;display:block;
+  border:1px solid var(--line);
+  background:var(--bg-soft);
+  box-shadow:0 18px 36px -22px rgba(0,0,0,.85);
+}
+h1{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:clamp(2.55rem,9vw,4.25rem);
+  line-height:1.03;
+  letter-spacing:-.022em;
+  margin:1.35rem 0 0;
+  text-wrap:balance;
+}
+.tagline{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(1.12rem,2.6vw,1.42rem);
+  letter-spacing:-.008em;
+  color:var(--gold);
+  margin:.6rem 0 0;
+  text-wrap:balance;
+}
+.intro{max-width:58ch;margin:1rem 0 0;color:var(--text)}
+.intro .inline-link{margin-left:.15rem;white-space:nowrap}
+
+.dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+section{padding:1.7rem 0 1.45rem;border-top:1px solid var(--line)}
+h2{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.3rem;
+  letter-spacing:-.01em;
+  margin:0 0 .75rem;
+}
+.list{list-style:none;margin:0;padding:0}
+.list li + li{border-top:1px solid var(--line)}
+.row{
+  display:flex;align-items:center;gap:.95rem;
+  padding:.8rem .7rem;margin-inline:-.7rem;
+  border-radius:8px;color:inherit;text-decoration:none;
+  transition:background-color .3s var(--ease);
+}
+a.row:hover{background:var(--gold-soft)}
+.row-label{display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.primary .name{font-family:var(--serif);font-size:1.05rem;font-weight:600;letter-spacing:-.01em;transition:color .3s var(--ease)}
+.primary .desc{font-size:.88rem;color:var(--muted);line-height:1.45}
+a.row:hover .primary .name,a.row:hover .social .name{color:var(--gold)}
+.meta{
+  margin-left:auto;text-align:right;
+  font-family:var(--mono);font-size:.78rem;
+  color:var(--muted);white-space:nowrap;
+  padding-left:.5rem;
+}
+.arrow{width:17px;height:17px;flex:none;color:var(--muted);transition:transform .3s var(--ease),color .3s var(--ease)}
+a.row:hover .arrow{transform:translateX(4px);color:var(--gold)}
+.icon{width:19px;height:19px;flex:none;fill:var(--gold);transition:fill .3s var(--ease)}
+a.row:hover .icon{fill:var(--gold)}
+.social .name{font-size:1rem;font-weight:500;letter-spacing:-.005em}
+.url{font-family:var(--mono);font-size:.76rem;color:var(--muted);letter-spacing:.01em;overflow-wrap:anywhere}
+.email-row{display:flex;align-items:center;gap:.75rem;padding-block:.85rem;flex-wrap:wrap}
+.email-addr{
+  font-family:var(--mono);font-size:.92rem;
+  color:var(--text);text-decoration:none;
+  overflow-wrap:anywhere;
+}
+.email-addr:hover{color:var(--gold);text-decoration:underline}
+.copy{
+  margin-left:auto;
+  font-family:var(--mono);font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--muted);background:transparent;
+  border:1px solid var(--line);border-radius:6px;
+  padding:.42rem .7rem;min-height:34px;
+  cursor:pointer;
+  transition:color .25s var(--ease),border-color .25s var(--ease),background-color .25s var(--ease);
+}
+.copy:hover{color:var(--gold);border-color:var(--gold)}
+.copy:active{background:var(--gold-soft)}
+.inline-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:var(--gold);text-decoration:none;font-weight:500;
+}
+.inline-link:hover{text-decoration:underline}
+.inline-link .arrow{color:currentColor;width:15px;height:15px}
+.inline-link:hover .arrow{transform:translateX(3px)}
+.book{display:grid;grid-template-columns:190px minmax(0,1fr);gap:clamp(1.25rem,4vw,2rem);align-items:start}
+.book img{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:4px;
+  box-shadow:0 24px 48px -28px rgba(0,0,0,.9);
+  background:var(--bg-soft);
+}
+@keyframes coverIn{
+  from{opacity:0;transform:translateY(14px) scale(.985);clip-path:inset(0 0 9% 0)}
+  to{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+}
+.book.in img{animation:coverIn 1s var(--ease) both}
+.book h3{
+  font-family:var(--serif);font-weight:600;
+  font-size:1.28rem;line-height:1.25;letter-spacing:-.012em;
+  margin:.1rem 0 .6rem;text-wrap:balance;
+}
+.book p{margin:0 0 .7rem;color:var(--text);font-size:.95rem;line-height:1.6}
+.book .book-status{font-family:var(--mono);font-size:.79rem;color:var(--muted);display:flex;align-items:center;gap:.5rem;margin-bottom:1rem}
+code.fp{
+  display:block;
+  font-family:var(--mono);font-size:.82rem;line-height:1.8;
+  color:var(--text);
+  padding:.9rem 1rem;
+  border:1px solid var(--line);border-radius:6px;
+  background:var(--bg-soft);
+  overflow-wrap:anywhere;
+  margin:0 0 1rem;
+}
+.pgp-links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:0;font-size:.92rem}
+.pgp-note{color:var(--muted);font-size:.9rem;margin:.9rem 0 0}
+.shot{
+  width:100%;height:auto;display:block;
+  border:1px solid var(--line);border-radius:4px;
+  background:var(--bg-soft);
+  box-shadow:0 24px 48px -30px rgba(0,0,0,.9);
+}
+.fc-row{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+footer{padding-block:1.6rem 2.4rem;border-top:1px solid var(--line);margin-top:0}
+.footer-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.7rem}
+.topbar{display:flex;justify-content:flex-end;align-items:center;gap:.5rem;padding-top:.9rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--sans);font-size:.88rem;font-weight:500;
+  color:var(--text);background:transparent;
+  border:1px solid var(--line);border-radius:7px;
+  padding:.55rem .9rem;min-height:40px;
+  cursor:pointer;text-decoration:none;
+  transition:color .25s var(--ease),border-color .25s var(--ease),background-color .25s var(--ease);
+}
+.btn:hover{color:var(--gold);border-color:var(--gold)}
+.btn:active{background:var(--gold-soft)}
+.btn svg{width:16px;height:16px;flex:none}
+.hint{
+  font-family:var(--mono);font-size:.76rem;
+  color:var(--muted);margin:1rem 0 0;letter-spacing:.01em;
+}
+.credit{font-size:.82rem;color:var(--muted);margin:.5rem 0 0}
+@media (max-width:560px){
+  .book{grid-template-columns:1fr}
+  .book img{max-width:200px}
+  .meta{display:none}
+  .bg{opacity:.05}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .hero>*{animation:none}
+}
+</style>
 </head>
 <body>
-  Redirecting to <a href="https://github.com/azmawee/profile">github.com/azmawee/profile</a>…
+<a class="skip" href="#main" data-i18n="skip">Lompat ke kandungan</a>
+<div class="bg" aria-hidden="true">
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" stroke="currentColor" stroke-width="1">
+  <path d="M-30 210H210L330 330H520L610 240H840"/>
+  <path d="M-30 640H150L260 530V360"/>
+  <path d="M260 530H470L560 620H790L900 510H1120"/>
+  <path d="M840 240V390L960 510V690"/>
+  <path d="M960 510H1160L1270 620H1470"/>
+  <path d="M560 620V760L660 860"/>
+  <path d="M790 620H900"/>
+  <path d="M1120 510V330H1290V180"/>
+  <path d="M1290 330H1470"/>
+  <path d="M900 510V330H1120"/>
+  <path d="M330 330V180L210 120" stroke-dasharray="4 6"/>
+  <path d="M610 240V100L740 40" stroke-dasharray="4 6"/>
+  <rect x="1180" y="700" width="110" height="150" rx="4"/>
+  <rect x="110" y="762" width="120" height="78" rx="4"/>
+  <circle cx="210" cy="210" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="330" cy="330" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="520" cy="330" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="610" cy="240" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="840" cy="240" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="260" cy="530" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="470" cy="530" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="560" cy="620" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="790" cy="620" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="900" cy="510" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="1120" cy="510" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="960" cy="510" r="6"/>
+  <circle cx="1120" cy="330" r="6"/>
+  <circle cx="1290" cy="330" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="1290" cy="180" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="1470" cy="620" r="6"/>
+  <circle cx="660" cy="860" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="150" cy="640" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="210" cy="120" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="740" cy="40" r="3.5" fill="currentColor" stroke="none"/>
+  <circle cx="900" cy="330" r="3.5" fill="currentColor" stroke="none"/>
+</svg>
+</div>
+<div class="spot" aria-hidden="true"></div>
+
+<div class="wrap topbar">
+  <button class="btn" type="button" id="share">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07 0l1.42-1.42a5 5 0 0 0-7.07-7.07L10.7 5.23" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 11a5 5 0 0 0-7.07 0L5.5 12.42a5 5 0 0 0 7.07 7.07l1.42-1.42" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span data-i18n="share">Salin</span>
+  </button>
+  <button class="btn" type="button" id="lang" aria-label="Tukar bahasa">EN</button>
+</div>
+
+<header class="wrap hero">
+  <img class="avatar" src="assets/avatar.jpg" width="240" height="240" alt="Tengku Azmawee" fetchpriority="high">
+  <h1>Tengku Azmawee</h1>
+  <p class="tagline" data-i18n="tagline">ex-BNM, ex-CIMB, hidup bebas berjejak bumi.</p>
+  <p class="intro"><span data-i18n="intro">Jurutera keselamatan siber dan Unix/FreeBSD selama 25 tahun. Kini membina tool kecil, menulis, dan menjaga komuniti open source.</span> <a class="inline-link" href="https://github.com/azmawee/profile"><span data-i18n="profil">Profil</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+</header>
+
+<main id="main" class="wrap">
+
+  <section aria-labelledby="h-social">
+    <h2 id="h-social" data-i18n="h_social">Sosial</h2>
+    <ul class="list social">
+      <li><a class="row" href="https://www.facebook.com/maui512gbram" rel="me noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>
+        <span class="row-label"><span class="name">Facebook</span><span class="url">facebook.com/maui512gbram</span></span>
+      </a></li>
+      <li><a class="row" href="https://www.instagram.com/maui512gbram/" rel="me noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.03.084c-1.277.06-2.149.264-2.911.563-.789.308-1.458.72-2.123 1.388C1.331 2.702.921 3.371.616 4.162c-.296.764-.496 1.637-.552 2.914-.057 1.278-.069 1.688-.063 4.947.007 3.259.02 3.667.083 4.947.061 1.277.264 2.148.563 2.911.308.789.72 1.457 1.388 2.123.668.665 1.337 1.074 2.129 1.38.763.295 1.636.496 2.913.552 1.277.056 1.688.069 4.946.063 3.258-.007 3.668-.021 4.948-.082 1.28-.06 2.147-.265 2.91-.563.789-.309 1.458-.72 2.123-1.388.665-.669 1.074-1.338 1.379-2.129.296-.763.497-1.636.552-2.912.056-1.281.069-1.69.063-4.948-.006-3.258-.021-3.667-.082-4.947-.06-1.28-.264-2.148-.563-2.911-.308-.789-.72-1.457-1.388-2.123C21.298 1.33 20.628.921 19.838.617A8.195 8.195 0 0 0 16.924.065C15.647.009 15.236-.005 11.977.001 8.718.008 8.31.022 7.03.084m.14 21.693c-1.17-.05-1.805-.245-2.228-.408-.561-.216-.96-.477-1.382-.895-.422-.418-.681-.819-.9-1.378-.164-.424-.362-1.058-.417-2.228-.06-1.265-.072-1.644-.079-4.848-.007-3.204.006-3.583.061-4.848.05-1.169.245-1.805.408-2.228.216-.562.476-.96.895-1.382.419-.422.818-.681 1.378-.9.423-.165 1.058-.362 2.227-.417 1.266-.06 1.645-.072 4.848-.079 3.204-.007 3.584.005 4.85.061 1.169.05 1.805.244 2.228.408.56.216.96.475 1.381.895.422.419.682.818.9 1.378.166.422.362 1.056.417 2.227.06 1.265.074 1.645.08 4.848.006 3.203-.005 3.583-.061 4.848-.051 1.17-.245 1.805-.408 2.229-.216.56-.476.96-.895 1.382-.419.421-.818.681-1.378.9-.423.164-1.058.361-2.227.417-1.265.06-1.645.072-4.849.079-3.204.007-3.583-.006-4.848-.061M16.953 5.586a1.44 1.44 0 1 0 1.437-1.442 1.44 1.44 0 0 0-1.437 1.442M5.839 12.012a6.161 6.161 0 1 0 6.173-6.15 6.162 6.162 0 0 0-6.173 6.15M8 12.008a4 4 0 1 1 4.008 3.992A4 4 0 0 1 8 12.008"/></svg>
+        <span class="row-label"><span class="name">Instagram</span><span class="url">instagram.com/maui512gbram</span></span>
+      </a></li>
+      <li><a class="row" href="https://www.threads.com/@maui512gbram" rel="me noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg>
+        <span class="row-label"><span class="name">Threads</span><span class="url">threads.com/@maui512gbram</span></span>
+      </a></li>
+      <li><a class="row" href="https://x.com/maui_mybsd" rel="me noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
+        <span class="row-label"><span class="name">X</span><span class="url">x.com/maui_mybsd</span></span>
+      </a></li>
+      <li><a class="row" href="https://www.tiktok.com/@azmawee" rel="me noopener">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        <span class="row-label"><span class="name">TikTok</span><span class="url">tiktok.com/@azmawee</span></span>
+      </a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-email">
+    <h2 id="h-email" data-i18n="h_email">E-mel</h2>
+    <ul class="list">
+      <li class="email-row">
+        <a class="email-addr" href="mailto:azmawee@yahoo.com">azmawee@yahoo.com</a>
+        <button class="copy" type="button" data-copy="azmawee@yahoo.com" data-i18n="copy" aria-label="Salin azmawee@yahoo.com">Salin</button>
+      </li>
+      <li class="email-row">
+        <a class="email-addr" href="mailto:azmawee@freebsd.my">azmawee@freebsd.my</a>
+        <button class="copy" type="button" data-copy="azmawee@freebsd.my" data-i18n="copy" aria-label="Salin azmawee@freebsd.my">Salin</button>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-book">
+    <h2 id="h-book" data-i18n="h_book">Buku</h2>
+    <article class="book">
+      <img src="assets/book-cover.jpg" width="900" height="1158" alt="Kulit buku FreeBSD: Seni Membina Rangkaian Rumah Moden" loading="lazy">
+      <div class="book-body">
+        <h3>FreeBSD: Seni Membina Rangkaian Rumah Moden</h3>
+        <p data-i18n="book_desc">Panduan praktikal membina rangkaian rumah moden dengan FreeBSD, dari pemasangan sistem, PPPoE, firewall PF, Wi-Fi, DNS terenkripsi, NAS, VPN, backup, bhyve, hingga pemantauan. Disertai contoh konfigurasi sebenar.</p>
+        <p class="book-status"><span class="dot" aria-hidden="true"></span><span data-i18n="book_status">Dalam proses penerbitan</span></p>
+        <a class="inline-link" href="https://github.com/azmawee/seni-freebsd" rel="noopener"><span data-i18n="book_link">Lihat repo buku</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="h-primary">
+    <h2 id="h-primary" data-i18n="h_primary">Utama</h2>
+    <ul class="list primary">
+      <li><a class="row" href="https://github.com/azmawee?tab=repositories" rel="noopener">
+        <span class="row-label"><span class="name">GitHub</span><span class="desc" data-i18n="d_github">Kod, projek dan eksperimen</span></span>
+        <span class="meta">repositories</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
+      <li><a class="row" href="https://freebsd.my" rel="noopener">
+        <span class="row-label"><span class="name">freebsd.my</span><span class="desc" data-i18n="d_freebsd">Komuniti FreeBSD Malaysia</span></span>
+        <span class="meta">community</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
+      <li><a class="row" href="https://azmawee.freebsd.my" rel="noopener">
+        <span class="row-label"><span class="name">azmawee.freebsd.my</span><span class="desc" data-i18n="d_blog">Blog dan nota teknikal</span></span>
+        <span class="meta">weblog</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="h-pgp">
+    <h2 id="h-pgp" data-i18n="h_pgp">Kunci PGP</h2>
+    <code class="fp">8BF7 D0AF CA45 5313 A3BF  ACFB B90B 66C7 712D AA69</code>
+    <div class="footer-actions" style="margin-bottom:1rem">
+      <button class="copy" type="button" data-copy="8BF7 D0AF CA45 5313 A3BF ACFB B90B 66C7 712D AA69" data-i18n="copy" style="margin-left:0" aria-label="Salin fingerprint PGP">Salin</button>
+    </div>
+    <p class="pgp-links">
+      <a href="https://keys.openpgp.org/search?q=712DAA69" rel="noopener">keys.openpgp.org</a>
+      <a href="https://azmawee.freebsd.my/pgp" rel="noopener" data-i18n="pgp_full">Kunci penuh (.asc)</a>
+    </p>
+    <p class="pgp-note" data-i18n="pgp_note">Untuk verifikasi atau komunikasi terenkripsi.</p>
+  </section>
+
+  <section aria-labelledby="h-switch">
+    <h2 id="h-switch">Nintendo Switch</h2>
+    <img class="shot" src="assets/switch-fc.jpg" width="1200" height="675" alt="Profil Nintendo Switch Maui, friend code SW-3155-1295-4427" loading="lazy">
+    <div class="fc-row">
+      <span class="email-addr">SW-3155-1295-4427</span>
+      <button class="copy" type="button" data-copy="SW-3155-1295-4427" data-i18n="copy" aria-label="Salin SW-3155-1295-4427">Salin</button>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p class="hint" data-i18n="hint">Tip papan kekunci: g untuk GitHub, m untuk e-mel.</p>
+  <p class="credit" data-i18n="credit">Dibina dengan HTML biasa. Tiada rangka kerja, tiada penjejak.</p>
+  <p class="credit"><a href="https://github.com/azmawee/profile" rel="noopener" data-i18n="profil">Profil</a></p>
+</footer>
+
+<script>
+(function () {
+  var dict = {
+    ms: {
+      skip: "Lompat ke kandungan",
+      tagline: "ex-BNM, ex-CIMB, hidup bebas berjejak bumi.",
+      intro: "Jurutera keselamatan siber dan Unix/FreeBSD selama 25 tahun. Kini membina tool kecil, menulis, dan menjaga komuniti open source.",
+      profil: "Profil",
+      h_primary: "Utama",
+      d_freebsd: "Komuniti FreeBSD Malaysia",
+      d_blog: "Blog dan nota teknikal",
+      d_github: "Kod, projek dan eksperimen",
+      h_social: "Sosial",
+      h_email: "E-mel",
+      h_book: "Buku",
+      book_desc: "Panduan praktikal membina rangkaian rumah moden dengan FreeBSD, dari pemasangan sistem, PPPoE, firewall PF, Wi-Fi, DNS terenkripsi, NAS, VPN, backup, bhyve, hingga pemantauan. Disertai contoh konfigurasi sebenar.",
+      book_status: "Dalam proses penerbitan",
+      book_link: "Lihat repo buku",
+      h_pgp: "Kunci PGP",
+      pgp_full: "Kunci penuh (.asc)",
+      pgp_note: "Untuk verifikasi atau komunikasi terenkripsi.",
+      copy: "Salin",
+      copied: "Disalin",
+      share: "Salin",
+      hint: "Tip papan kekunci: g untuk GitHub, m untuk e-mel.",
+      credit: "Dibina dengan HTML biasa. Tiada rangka kerja, tiada penjejak."
+    },
+    en: {
+      skip: "Skip to content",
+      tagline: "ex-BNM, ex-CIMB, living free with feet on the ground.",
+      intro: "Cybersecurity and Unix/FreeBSD engineer for 25 years. Now building small tools, writing, and keeping open source communities alive.",
+      profil: "Profile",
+      h_primary: "Main",
+      d_freebsd: "FreeBSD Malaysia community",
+      d_blog: "Blog and technical notes",
+      d_github: "Code, projects and experiments",
+      h_social: "Social",
+      h_email: "Email",
+      h_book: "Book",
+      book_desc: "A practical guide to building a modern home network with FreeBSD, from system install, PPPoE, PF firewall, Wi-Fi, encrypted DNS, NAS, VPN, backup, bhyve, to monitoring. Includes real configuration examples.",
+      book_status: "In publishing process",
+      book_link: "View book repo",
+      h_pgp: "PGP Key",
+      pgp_full: "Full key (.asc)",
+      pgp_note: "For verification or encrypted communication.",
+      copy: "Copy",
+      copied: "Copied",
+      share: "Copy",
+      hint: "Keyboard tip: g for GitHub, m for email.",
+      credit: "Built with plain HTML. No framework, no trackers."
+    }
+  };
+
+  var lang = "ms";
+  try {
+    var saved = localStorage.getItem("azmawee-lang");
+    if (saved === "ms" || saved === "en") lang = saved;
+  } catch (e) {}
+
+  var langBtn = document.getElementById("lang");
+
+  function apply(next) {
+    lang = next;
+    var t = dict[lang];
+    document.documentElement.lang = lang;
+    Array.prototype.forEach.call(document.querySelectorAll("[data-i18n]"), function (el) {
+      var key = el.getAttribute("data-i18n");
+      if (t[key]) el.textContent = t[key];
+    });
+    langBtn.textContent = lang === "ms" ? "EN" : "BM";
+    langBtn.setAttribute("aria-label", lang === "ms" ? "Switch to English" : "Tukar ke Bahasa Melayu");
+    Array.prototype.forEach.call(document.querySelectorAll("button[data-copy]"), function (b) {
+      b.setAttribute("aria-label", (lang === "ms" ? "Salin " : "Copy ") + b.getAttribute("data-copy"));
+    });
+    try { localStorage.setItem("azmawee-lang", lang); } catch (e) {}
+  }
+
+  langBtn.addEventListener("click", function () {
+    apply(lang === "ms" ? "en" : "ms");
+  });
+
+  function fallbackCopy(text, done) {
+    var ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.top = "-1000px";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+    done();
+  }
+
+  function copyText(text, done) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll("button[data-copy]"), function (btn) {
+    btn.addEventListener("click", function () {
+      var text = btn.getAttribute("data-copy");
+      copyText(text, function () {
+        btn.textContent = dict[lang].copied;
+        window.setTimeout(function () {
+          btn.textContent = dict[lang].copy;
+        }, 1600);
+      });
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    var tag = (e.target.tagName || "").toLowerCase();
+    if (tag === "input" || tag === "textarea" || tag === "select" || e.target.isContentEditable) return;
+    if (e.key === "g") window.open("https://github.com/azmawee?tab=repositories", "_blank", "noopener");
+    if (e.key === "m") window.location.href = "mailto:azmawee@freebsd.my";
+  });
+
+  var shareBtn = document.getElementById("share");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", function () {
+      var label = shareBtn.querySelector("[data-i18n]");
+      copyText(window.location.href.split("#")[0], function () {
+        label.textContent = dict[lang].copied;
+        window.setTimeout(function () {
+          label.textContent = dict[lang].share;
+        }, 1600);
+      });
+    });
+  }
+
+  var spot = document.querySelector(".spot");
+  if (spot && window.matchMedia("(pointer:fine)").matches && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    var ticking = false;
+    window.addEventListener("pointermove", function (e) {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        spot.style.setProperty("--mx", e.clientX + "px");
+        spot.style.setProperty("--my", e.clientY + "px");
+        spot.classList.add("on");
+        ticking = false;
+      });
+    }, { passive: true });
+    document.addEventListener("pointerleave", function () { spot.classList.remove("on"); });
+    window.addEventListener("blur", function () { spot.classList.remove("on"); });
+  }
+
+  var book = document.querySelector(".book");
+  if (book) {
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            book.classList.add("in");
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.25 });
+      io.observe(book);
+    } else {
+      book.classList.add("in");
+    }
+  }
+
+  apply(lang);
+})();
+</script>
 </body>
 </html>
